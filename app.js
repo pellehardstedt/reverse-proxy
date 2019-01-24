@@ -17,7 +17,7 @@ http.createServer((req,res)=> {
   let topDomain = hostParts.pop();
   let domain = hostParts.pop();
   let subDomain = hostParts.join('.');
-  let urlParts + req.url.split('/');
+  let urlParts = req.url.split('/');
 
   let port;
 
