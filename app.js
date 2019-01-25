@@ -19,7 +19,7 @@ http.createServer((req,res)=> {
   let subDomain = hostParts.join('.');
   let urlParts = req.url.split('/');
 
-  console.log(urlParts);
+  console.log('url part 2: ' + urlParts[2]);
 
   let port;
 
@@ -30,6 +30,7 @@ http.createServer((req,res)=> {
     port = 3000;
   }
   else if (urlParts[2] == 'example') {
+    console.log('inside example');
     port = 3000;
   }
   else {
