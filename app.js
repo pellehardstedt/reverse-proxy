@@ -19,12 +19,17 @@ http.createServer((req,res)=> {
   let subDomain = hostParts.join('.');
   let urlParts = req.url.split('/');
 
+  console.log(urlParts);
+
   let port;
 
   if(subDomain == '' || subDomain == 'www'){
     port = 4001;
   }
   else if (subDomain == 'example') {
+    port = 3000;
+  }
+  else if (urlParts[2] == 'example') {
     port = 3000;
   }
   else {
