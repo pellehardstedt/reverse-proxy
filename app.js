@@ -30,6 +30,8 @@ http.createServer((req,res)=> {
     port = 3000;
   }
   else if (urlParts[1] == 'example') {
+    console.log('inside urlParts1')
+    console.log(urlParts[1]);
     port = 3000;
   }
   else {
