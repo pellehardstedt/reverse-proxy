@@ -47,7 +47,7 @@ function setResponseHeaders(req,res){
   res.oldWriteHead = res.writeHead;
 
   res.writeHead = function(statusCode, headers){
-    res.setHeader('x-powered-by ','Pelle');
+    res.setHeader('x-powered-by','Pelle');
     res.oldWriteHead(statusCode, headers);
   }
 }
