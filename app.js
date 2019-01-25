@@ -34,7 +34,7 @@ http.createServer((req,res)=> {
     port = 3000;
   }
   else {
-    port = 3000;
+    // port = 3000;
     // res.statusCode = 500;
     // res.end('Can not find you app!');
   }
@@ -47,7 +47,7 @@ function setResponseHeaders(req,res){
   res.oldWriteHead = res.writeHead;
 
   res.writeHead = function(statusCode, headers){
-    res.setHeader('x-powered-by','Pelle');
+    res.setHeader('x-powered-by ','Pelle');
     res.oldWriteHead(statusCode, headers);
   }
 }
