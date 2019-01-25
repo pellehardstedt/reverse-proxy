@@ -19,8 +19,6 @@ http.createServer((req,res)=> {
   let subDomain = hostParts.join('.');
   let urlParts = req.url.split('/');
 
-  console.log(urlParts);
-
   let port;
 
   if(subDomain == '' || subDomain == 'www'){
